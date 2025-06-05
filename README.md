@@ -2,7 +2,8 @@
 Criação do cadastraproduto.php
 
 <?php
-
+include('segurancadez.php');
+include('cabecalho.php');
 include('conn.php');
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -13,7 +14,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $valor = $_POST['valor'];
     $imagem = $_FILES['imagem']['name'];
     $barcode = $_POST['barcode'];
-    $status = $_POST['status'];
+    $status = 1;
     
     // Dispensar o uso de If/Else //
   
